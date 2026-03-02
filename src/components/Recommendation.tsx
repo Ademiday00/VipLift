@@ -19,7 +19,7 @@ const Recommendation = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        {/* Card 1 */}
+       
         <div className="bg-[#242424] text-white p-6 rounded-xl flex flex-col items-center justify-center hover:scale-105 transform transition duration-500 shadow-lg">
           <BsBriefcase className="text-blue-400 text-5xl mb-4" />
           <h2 className="font-bold text-lg md:text-xl text-center mb-2">
@@ -30,7 +30,7 @@ const Recommendation = () => {
           </p>
         </div>
 
-        {/* Card 2 */}
+      
         <div className="bg-[#242424] text-white p-6 rounded-xl flex flex-col items-center justify-center hover:scale-105 transform transition duration-500 shadow-lg">
           <MdTrendingUp className="text-green-400 text-5xl mb-4" />
           <h2 className="font-bold text-lg md:text-xl text-center mb-2">
@@ -41,7 +41,7 @@ const Recommendation = () => {
           </p>
         </div>
 
-        {/* Card 3 */}
+       
         <div className="bg-[#242424] text-white p-6 rounded-xl flex flex-col items-center justify-center hover:scale-105 transform transition duration-500 shadow-lg">
           <AiOutlineCheckCircle className="text-purple-400 text-5xl mb-4" />
           <h2 className="font-bold text-lg md:text-xl text-center mb-2">
@@ -52,7 +52,7 @@ const Recommendation = () => {
           </p>
         </div>
 
-        {/* Card 4 */}
+       
         <div className="bg-[#242424] text-white p-6 rounded-xl flex flex-col items-center justify-center hover:scale-105 transform transition duration-500 shadow-lg">
           <FaGem className="text-yellow-400 text-5xl mb-4" />
           <h2 className="font-bold text-lg md:text-xl text-center mb-2">
