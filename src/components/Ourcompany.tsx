@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import VipLift from "../assets/Feature-Home-lift-cost.jpg";
 import Navbar from "./Navbar";
 

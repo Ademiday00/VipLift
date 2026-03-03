@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Link } from "react-router-dom";
-import { ImSearch } from "react-icons/im";
-import { BsPersonCircle } from "react-icons/bs";
+// import { ImSearch } from "react-icons/im";
+// import { BsPersonCircle } from "react-icons/bs";
 import Viplift from "../assets/VipLift.jpeg";
-import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
+ 
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { BsBriefcase } from 'react-icons/bs'
 import { MdTrendingUp } from 'react-icons/md'
 import { AiOutlineCheckCircle } from 'react-icons/ai'
