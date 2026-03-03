@@ -17,7 +17,7 @@ const ContactSection = () => {
               <FaMapMarkerAlt className="text-sky-400 text-xl mt-1" />
               <div>
                 <h3 className="text-white font-semibold">Address</h3>
-                <p>123 Elevator Street, Business District, Your City</p>
+                <p>26, Grace Anjous Drive, Lekki Phase 1</p>
               </div>
             </div>
 
