@@ -31,13 +31,13 @@ const Ourcompany = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <h1 className="text-4xl font-bold mb-4">About Our Company</h1>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-300 max-w-2xl mx-auto">
           We provide reliable, modern, and efficient lift solutions for residential,
           commercial, and industrial spaces.
         </p>
       </motion.section>
 
-      {/* Who We Are */}
+     
       <motion.section
         className="mb-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
         variants={sectionVariant}
@@ -48,7 +48,7 @@ const Ourcompany = () => {
       >
         <div>
           <h2 className="text-2xl font-semibold mb-4 text-sky-400">Who We Are</h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             Our company specializes in designing, installing, and maintaining
             high-quality elevator systems. With years of industry experience,
             we focus on safety, comfort, and long-term performance.
@@ -60,7 +60,7 @@ const Ourcompany = () => {
         </div>
       </motion.section>
 
-      {/* Mission & Vision */}
+     
       <motion.section
         className="mb-20 grid grid-cols-1 md:grid-cols-2 gap-12"
         variants={sectionVariant}
@@ -74,7 +74,7 @@ const Ourcompany = () => {
           variants={cardVariant}
         >
           <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
-          <p className="text-gray-600">
+          <p className="text-gray-400">
             To deliver innovative and dependable lift solutions that enhance
             mobility and improve everyday life.
           </p>
@@ -85,7 +85,7 @@ const Ourcompany = () => {
           variants={cardVariant}
         >
           <h3 className="text-xl font-semibold mb-3 text-sky-400">Our Vision</h3>
-          <p className="text-gray-600">
+          <p className="text-gray-400">
             To become a trusted leader in lift technology through quality,
             innovation, and customer satisfaction.
           </p>

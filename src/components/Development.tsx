@@ -17,7 +17,7 @@ const Development = () => {
   };
 
   return (
-    <section className="w-full bg-black py-20 px-6 md:px-20 text-white font-[Lora]">
+    <section className="w-full bg-grey-700 py-20 px-6 md:px-20 text-white font-[Lora]">
       <Navbar />
 
      

@@ -13,7 +13,7 @@ const Recommendation = () => {
         Choose Excellence
       </h1>
 
-      <p className="text-center text-lg mb-10 text-gray-600">
+      <p className="text-center text-lg mb-10 text-gray-200">
         We deliver smart, reliable, and modern elevator solutions built on excellence and trust.
       </p>
       

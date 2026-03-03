@@ -3,7 +3,7 @@ import Lift from "../assets/thirdimage.jpg";
 
 const Aboutus = () => {
   return (
-    <section className="bg-black py-16 px-4">
+    <section className="bg-grey-300 py-16 px-4">
       <div className="max-w-7xl mx-auto">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center bg-[#1e1e1e] rounded-2xl p-6 lg:p-10 border border-[#2f2f2f]">

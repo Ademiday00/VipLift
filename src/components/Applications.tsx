@@ -51,7 +51,7 @@ const Applications = () => {
     },
   ];
 
-  // Motion variants
+  
   const cardVariant = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
     visible: { opacity: 1, y: 0, scale: 1 },
@@ -67,7 +67,7 @@ const Applications = () => {
       <Navbar />
 
       <div className="px-6 md:px-20 py-16 font-[Lora]">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-blue-900 mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
           Applications
         </h1>
 

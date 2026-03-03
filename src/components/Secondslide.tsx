@@ -2,11 +2,11 @@ import Slide from "../assets/secondimage.jpg";
 
 const Secondslide = () => {
   return (
-    <section className="w-full bg-black px-4 py-12 flex justify-center">
+    <section className="w-full bg-grey-300 px-4 py-12 flex justify-center">
       <div className="max-w-6xl w-full">
 
       
-        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold text-blue-500 text-center mb-10">
          Our Expertise
         </h1>
 
