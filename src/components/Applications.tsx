@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { useState } from "react";
 import Navbar from "./Navbar";
 
@@ -48,6 +51,17 @@ const Applications = () => {
     },
   ];
 
+  // Motion variants
+  const cardVariant = {
+    hidden: { opacity: 0, y: 30, scale: 0.95 },
+    visible: { opacity: 1, y: 0, scale: 1 },
+  };
+
+  const modalVariant = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
   return (
     <>
       <Navbar />
@@ -57,12 +71,16 @@ const Applications = () => {
           Applications
         </h1>
 
-        
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {applications.map((item, index) => (
-            <div
+            <motion.div
               key={index}
               className="border border-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-500 transform hover:-translate-y-2"
+              variants={cardVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, delay: index * 0.1, ease: "easeInOut" }}
             >
               <img
                 src={item.image}
@@ -75,7 +93,9 @@ const Applications = () => {
                   {item.title}
                 </h2>
 
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={() => {
                     setModalData(item);
                     setModalOpen(true);
@@ -83,18 +103,23 @@ const Applications = () => {
                   className="px-6 py-2 bg-blue-800 text-white rounded-xl hover:bg-blue-600 transition duration-300"
                 >
                   Read More
-                </button>
+                </motion.button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
-     
       {modalOpen && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 px-4">
-          <div className="bg-white text-gray-800 w-full md:w-2/3 lg:w-1/2 p-8 rounded-3xl shadow-2xl relative animate-fadeIn">
-
+        <motion.div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 px-4"
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          variants={modalVariant}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+        >
+          <div className="bg-white text-gray-800 w-full md:w-2/3 lg:w-1/2 p-8 rounded-3xl shadow-2xl relative">
             <button
               onClick={() => setModalOpen(false)}
               className="absolute top-4 right-6 text-2xl font-bold text-gray-600 hover:text-black"
@@ -106,12 +131,9 @@ const Applications = () => {
               {modalData.title}
             </h2>
 
-            <p className="text-lg leading-relaxed">
-              {modalData.text}
-            </p>
-
+            <p className="text-lg leading-relaxed">{modalData.text}</p>
           </div>
-        </div>
+        </motion.div>
       )}
     </>
   );

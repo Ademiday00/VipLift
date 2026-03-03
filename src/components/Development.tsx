@@ -1,12 +1,33 @@
-// import React from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import Navbar from "./Navbar";
 
 const Development = () => {
+
+  // Motion variants for each card
+  const cardVariant = {
+    hidden: { opacity: 0, y: 30, scale: 0.95 },
+    visible: { opacity: 1, y: 0, scale: 1 },
+  };
+
+  // Optional: stagger children for a smoother entrance
+  const containerVariant = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.15 } },
+  };
+
   return (
-    <section className="w-full bg-black py-20 px-6 md:px-20 text-white font-serif ">
-  <Navbar/>
-     
-      <div className="text-center mb-16">
+    <section className="w-full bg-black py-20 px-6 md:px-20 text-white font-serif">
+      <Navbar />
+
+      {/* Section header */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1.2, ease: "easeInOut" }}
+        className="text-center mb-16"
+      >
         <h1 className="text-4xl md:text-5xl font-bold">
           Development Process
         </h1>
@@ -14,78 +35,63 @@ const Development = () => {
           Our structured development approach ensures precision, safety, and
           seamless integration from planning to long-term maintenance.
         </p>
-      </div>
+      </motion.div>
 
-    
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-        
-        <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl hover:bg-white/10  hover:scale-105 transform transition duration-600">
-          <h2 className="text-xl font-semibold mb-4 text-sky-400">
-            Project Planning
-          </h2>
-          <p className="text-gray-400">
-            Detailed consultation and site evaluation to understand structure,
-            traffic flow, and safety requirements.
-          </p>
-        </div>
-
-       
-        <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:scale-105 transition duration-600">
-          <h2 className="text-xl font-semibold mb-4 text-sky-400">
-            Design & Engineering
-          </h2>
-          <p className="text-gray-400">
-            Custom lift solutions combining modern design, efficiency, and
-            international safety compliance.
-          </p>
-        </div>
-
-        
-        <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:scale-105 transition duration-600">
-          <h2 className="text-xl font-semibold mb-4 text-sky-400">
-            Installation
-          </h2>
-          <p className="text-gray-400">
-            Precision installation ensuring seamless integration into new
-            and existing buildings.
-          </p>
-        </div>
-
-       
-        <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:scale-105 transition duration-600">
-          <h2 className="text-xl font-semibold mb-4 text-sky-400">
-            Testing & Commissioning
-          </h2>
-          <p className="text-gray-400">
-            Rigorous safety inspections, load testing, and operational
-            verification before project handover.
-          </p>
-        </div>
-
-       
-        <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:scale-105 transition duration-600">
-          <h2 className="text-xl font-semibold mb-4 text-sky-400">
-            Maintenance Support
-          </h2>
-          <p className="text-gray-400">
-            Ongoing servicing, inspections, and upgrades to ensure long-term
-            reliability and performance.
-          </p>
-        </div>
-
-      
-        <div className="bg-sky-600 p-8 rounded-2xl shadow-lg hover:scale-105 transition duration-600">
-          <h2 className="text-xl font-semibold mb-4">
-            Commitment to Excellence
-          </h2>
-          <p>
-            We deliver safe, efficient, and elegant vertical mobility solutions
-            tailored to every client's needs.
-          </p>
-        </div>
-
-      </div>
+      {/* Cards grid */}
+      <motion.div
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
+        variants={containerVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {[
+          {
+            title: "Project Planning",
+            text: "Detailed consultation and site evaluation to understand structure, traffic flow, and safety requirements.",
+            style: "bg-white/5 backdrop-blur-lg border border-white/10",
+          },
+          {
+            title: "Design & Engineering",
+            text: "Custom lift solutions combining modern design, efficiency, and international safety compliance.",
+            style: "bg-white/5 backdrop-blur-lg border border-white/10",
+          },
+          {
+            title: "Installation",
+            text: "Precision installation ensuring seamless integration into new and existing buildings.",
+            style: "bg-white/5 backdrop-blur-lg border border-white/10",
+          },
+          {
+            title: "Testing & Commissioning",
+            text: "Rigorous safety inspections, load testing, and operational verification before project handover.",
+            style: "bg-white/5 backdrop-blur-lg border border-white/10",
+          },
+          {
+            title: "Maintenance Support",
+            text: "Ongoing servicing, inspections, and upgrades to ensure long-term reliability and performance.",
+            style: "bg-white/5 backdrop-blur-lg border border-white/10",
+          },
+          {
+            title: "Commitment to Excellence",
+            text: "We deliver safe, efficient, and elegant vertical mobility solutions tailored to every client's needs.",
+            style: "bg-sky-600 shadow-lg",
+          },
+        ].map((card, index) => (
+          <motion.div
+            key={index}
+            className={`${card.style} p-8 rounded-2xl hover:bg-white/10 hover:scale-105 transform transition duration-600`}
+            variants={cardVariant}
+            transition={{ duration: 0.8, delay: index * 0.1, ease: "easeInOut" }}
+          >
+            <h2 className={`text-xl font-semibold mb-4 ${card.style.includes("sky-600") ? "text-white" : "text-sky-400"}`}>
+              {card.title}
+            </h2>
+            <p className={`${card.style.includes("sky-600") ? "text-white" : "text-gray-400"}`}>
+              {card.text}
+            </p>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 };
