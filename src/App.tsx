@@ -5,6 +5,7 @@ import Home from "./components/Home"
 import Applications from "./components/Applications"
 import Ourcompany from "./components/Ourcompany"
 import Development from './components/Development';
+import ScrollToTop from "./components/Scrolltotop"
 
 function App() {
   
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
       <Routes>
          <Route path="/" element={<Home />} />
          <Route path="/application" element={<Applications/>}/>
