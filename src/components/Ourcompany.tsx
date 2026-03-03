@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Ourcompany = () => {
   const navigate = useNavigate();
 
-  // Variants for smooth fade-in
+  
   const sectionVariant = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
@@ -19,10 +19,9 @@ const Ourcompany = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 font-serif">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 font-[Lora]">
       <Navbar />
-
-      {/* About Section */}
+ 
       <motion.section
         className="text-center mb-20"
         variants={sectionVariant}

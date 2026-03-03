@@ -11,7 +11,7 @@ import ContactSection from './Contactus';
 const Home = () => {
   const location = useLocation();
 
-  // Scroll to hash if coming from a button click
+ 
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.replace("#", "");
@@ -22,14 +22,14 @@ const Home = () => {
     }
   }, [location]);
 
-  // Simple fade-in variant
+ 
   const fadeVariant = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
 
   return (
-    <div className="font-serif">
+    <div className="font-[Lora]">
       <Navbar />
 
       <motion.div

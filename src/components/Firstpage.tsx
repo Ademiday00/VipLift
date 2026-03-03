@@ -19,7 +19,7 @@ const Firstpage = () => {
 
   return (
     <div className="px-4 py-12">
-      <h1 className="text-blue-800 flex justify-center text-3xl md:text-5xl lg:text-6xl font-bold mb-12 text-center">
+      <h1 className="text-blue-500 flex justify-center text-3xl md:text-5xl lg:text-6xl font-bold mb-12 text-center">
         Lift Solution for Seamless Integration
       </h1>
 

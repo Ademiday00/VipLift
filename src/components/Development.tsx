@@ -4,23 +4,23 @@ import Navbar from "./Navbar";
 
 const Development = () => {
 
-  // Motion variants for each card
+  
   const cardVariant = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
     visible: { opacity: 1, y: 0, scale: 1 },
   };
 
-  // Optional: stagger children for a smoother entrance
+ 
   const containerVariant = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.15 } },
   };
 
   return (
-    <section className="w-full bg-black py-20 px-6 md:px-20 text-white font-serif">
+    <section className="w-full bg-black py-20 px-6 md:px-20 text-white font-[Lora]">
       <Navbar />
 
-      {/* Section header */}
+     
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ const Development = () => {
         </p>
       </motion.div>
 
-      {/* Cards grid */}
+     
       <motion.div
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
         variants={containerVariant}

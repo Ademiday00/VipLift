@@ -66,7 +66,7 @@ const Applications = () => {
     <>
       <Navbar />
 
-      <div className="px-6 md:px-20 py-16 font-serif">
+      <div className="px-6 md:px-20 py-16 font-[Lora]">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-blue-900 mb-16">
           Applications
         </h1>

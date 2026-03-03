@@ -20,15 +20,7 @@ const Aboutus = () => {
             </p>
 
             <p className="text-gray-400 leading-relaxed text-sm lg:text-base">
-              VIP Lift is a lifting technology and engineering company
-              specializing in elevating and lifting solutions for private homes,
-              hospitals, shopping malls, churches, vessels, factories, offices,
-              club homes, and apartment buildings. We believe our lifts are
-              tasteful alternatives to staircases, a value-adding feature to any
-              building and a convenient solution for the movement of both people
-              and goods between different levels. VIPLift Nigeria Limited is a
-              branch of the VIPLift (Holding) in the Netherlands and we have our
-              corporate office situated in Lagos.
+              VIP Lift is a technology and engineering company providing lifting solutions for homes, hospitals, malls, offices, churches, vessels, and apartments. Our lifts are stylish, convenient alternatives to staircases, adding value and ease of movement.
             </p>
           </div>
 
