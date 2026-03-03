@@ -26,14 +26,10 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="/projects" className="transition-colors duration-300 hover:text-blue-800">
-                Completed Projects
-              </Link>
-            </li>
+            
             <li>
               <Link to="/application" className="transition-colors duration-300 hover:text-blue-800" >
-                Application
+                Applications
               </Link>
             </li>
             <li>
@@ -44,6 +40,11 @@ const Navbar = () => {
             <li>
               <Link to="/development" className="transition-colors duration-300 hover:text-blue-800">
                 Development
+              </Link>
+            </li>
+            <li>
+              <Link to="/projects" className="transition-colors duration-300 hover:text-blue-800">
+                Completed Projects
               </Link>
             </li>
           </ul>
@@ -60,7 +61,7 @@ const Navbar = () => {
             size={20}
           /> */}
           <Link
-            to="/contact"
+            to="/#contact"
             className="font-bold text-blue-700 border-2 border-solid border-blue-700 rounded-lg px-4 py-3 hover:bg-blue-800 hover:text-white transition transform duration-300 hover:-translate-y-1 hover:scale-105"
           >
             Contact us
@@ -98,11 +99,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="/product" onClick={() => setIsOpen(false)}>
-                Product
-              </Link>
-            </li>
+            
             <li>
               <Link to="/application" onClick={() => setIsOpen(false)}>
                 Application
@@ -118,6 +115,11 @@ const Navbar = () => {
                 Development
               </Link>
             </li>
+            <li>
+              <Link to="/product" onClick={() => setIsOpen(false)}>
+               Completed Project
+              </Link>
+            </li>
           </ul>
 
           {/* <div className="gap-6">
@@ -126,7 +128,7 @@ const Navbar = () => {
           </div> */}
 
           <Link
-            to="/contact"
+            to="/#contact"
             onClick={() => setIsOpen(false)}
             className="font-bold text-blue-700 border-2 rounded-lg px-6 py-3 hover:text-blue-800 transition-colors duration-300"
           >

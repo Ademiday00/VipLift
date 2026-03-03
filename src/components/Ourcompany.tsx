@@ -1,8 +1,10 @@
 // import React from "react";
+import { useNavigate } from "react-router-dom";
 import VipLift from "../assets/Feature-Home-lift-cost.jpg";
 import Navbar from "./Navbar";
 
 const Ourcompany = () => {
+  const navigate = useNavigate()
   return (
    
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 font-serif">
@@ -107,7 +109,7 @@ const Ourcompany = () => {
         <p className="text-gray-600 mb-6">
           Get in touch with us to discuss your project needs.
         </p>
-        <button className="px-8 py-3 border rounded-md hover:bg-sky-700 transition duration-700 ease-in-out">
+        <button className="px-8 py-3 border rounded-md hover:bg-sky-700 transition duration-700 ease-in-out" onClick={()=>navigate("/#contact", { replace: false })}>
           Contact Us
         </button>
       </section>

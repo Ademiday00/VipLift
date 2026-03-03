@@ -54,15 +54,15 @@ const Applications = () => {
 
       <div className="px-6 md:px-20 py-16 font-serif">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-blue-900 mb-16">
-          Our Applications
+          Applications
         </h1>
 
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
           {applications.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-500 transform hover:-translate-y-2"
+              className="border border-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-500 transform hover:-translate-y-2"
             >
               <img
                 src={item.image}
