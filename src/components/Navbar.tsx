@@ -13,14 +13,14 @@ const Navbar = () => {
      
       <nav className="fixed top-0 left-0 w-full flex items-center justify-between px-4 sm:px-8 lg:px-10 py-4 text-lg bg-white shadow-md z-50 font-serif">
        
-        <div className="flex items-center gap-6">
+        <div className="flex items-center  gap-6 xl:gap-50 lg:gap-10">
           <img
             src={Viplift}
             alt="Logo"
             className="h-12 w-28 object-contain"
           />
 
-          <ul className="hidden lg:flex gap-6 font-bold text-gray-800">
+          <ul className="hidden lg:flex gap-6 font-bold text-gray-800 ml-0">
             <li>
               <Link to="/" className="transition-colors duration-300 hover:text-blue-800">
                 Home
@@ -43,7 +43,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/projects" className="transition-colors duration-300 hover:text-blue-800">
+              <Link to="/projects" className="transition-colors duration-300 hover:text-blue-800 ">
                 Completed Projects
               </Link>
             </li>
@@ -62,7 +62,7 @@ const Navbar = () => {
           /> */}
           <Link
             to="/#contact"
-            className="font-bold text-blue-700 border-2 border-solid border-blue-700 rounded-lg px-4 py-3 hover:bg-blue-800 hover:text-white transition transform duration-300 hover:-translate-y-1 hover:scale-105"
+            className="font-bold text-blue-700 border-2 border-solid border-blue-700 rounded-lg px-2 py-1 hover:bg-blue-800 hover:text-white transition transform duration-300 hover:-translate-y-1 hover:scale-105"
           >
             Contact us
           </Link>
