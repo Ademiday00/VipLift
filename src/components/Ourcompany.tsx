@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useNavigate } from "react-router-dom";
 import VipLift from "../assets/Feature-Home-lift-cost.jpg";
 import Navbar from "./Navbar";
